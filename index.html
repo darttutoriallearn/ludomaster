@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback for Ludo Master in Nepal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle, #9D9D9D 0%, #BC821F 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #444;
+            animation: fadeInBackground 3s ease-in-out infinite alternate;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 550px;
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #BC821F;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: textSlideIn 1.5s ease-out;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            animation: fadeInLabel 1s ease-in forwards;
+            animation-delay: 0.5s;
+        }
+
+        input, textarea {
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            animation: fadeInField 1s ease-in forwards;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #BC821F;
+            outline: none;
+        }
+
+        button {
+            padding: 0.85rem;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #BC821F, #9D9D9D);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            letter-spacing: 1px;
+            animation: fadeInButton 1.5s ease-out forwards;
+            transform: translateY(10px);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #9D9D9D, #BC821F);
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #BC821F;
+            font-size: 1rem;
+            animation: slideInUp 1s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeInBackground {
+            from {
+                background: radial-gradient(circle, #9D9D9D 0%, #BC821F 100%);
+            }
+            to {
+                background: radial-gradient(circle, #BC821F 0%, #9D9D9D 100%);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes textSlideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInLabel {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInField {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInButton {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback for Ludo Master in Nepal</h1>
+        <form id="feedbackForm" action="mailto:adhikarisantosh039@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit">Send Feedback</button>
+        </form>
+    </div>
+    <footer>
+        © 2024 Santosh Adhikari
+    </footer>
+</body>
+</html>
